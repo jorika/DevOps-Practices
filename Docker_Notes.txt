@@ -1,0 +1,63 @@
+Show the Docker version information
+::: docker version
+
+Show all running containers
+::: docker ps
+
+Show all running and stopped containers
+::: docker ps -a
+
+Show all local images
+::: docker images
+
+Create and run the container
+::: docker run "image_name"
+
+Create and run the container in background
+::: docker run -d "image_name"
+
+Delete the container
+::: docker rm "container_name"
+
+Connect to the container terminal
+::: docker run -i -t "container_name" bash
+
+Remove all stopped containers
+::: docker container prune
+
+Stop the container
+::: docker stop "container name"
+
+Run the process inside container
+::: docker exec -t "container name" "process"
+
+Create name for container
+:: docker run -d --name my_container "container_name"
+
+How to do port redirect
+:: docker run -p 8080:80 nginx
+
+How to use volumes
+:: docker run -v ${PWD}:/usr/share/nginx/html nginx
+
+How to delete container after execution
+:: docker --rm
+
+Simple Dockerfile
+:: Simple python application
+
+FROM python:alpine
+WORKDIR /app
+COPY  ..
+CMD [ "python", "main.py" ]
+
+docker build . -t python_application
+
+How to do version control
+:: docker build . -t python_application:2.0.0
+
+How to run Docker Compose
+:: docker-compose up
+
+How to stop/delete Docker Compose
+:: docker-compose down
